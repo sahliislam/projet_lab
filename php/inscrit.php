@@ -1,6 +1,6 @@
 <?php 
 //configuration 
-include "../css1/";
+include "../css1/php/configuratio.php";
 $base=connect(); 
 //recuperation des donnes 
 $nom=$_POST['nom']; 
