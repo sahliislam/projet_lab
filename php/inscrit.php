@@ -1,8 +1,22 @@
 <?php 
 //configuration 
-include "../css1/php/configuratio.php";
-$base=connect(); 
-//recuperation des donnes 
+include "..\projet_lab\php\configuration.php";
+
+function connect(){
+$server="localhost"; 
+$base="isg"; 
+$username="root";
+$pass="";
+try {
+    //Code a executer
+    $con=new PDO("mysql:host=$server;isgname=$base",$username,$pass);
+    return $con;
+} catch (PDOException $e )
+{ 
+    // traitement en cas d'Exception
+    die("errrrrrrreeeeeeeeur : " . $e->getMessage());
+}
+}
 $nom=$_POST['nom']; 
 $Prenom=$_REQUEST['prenom']; 
 $numero=$_REQUEST['nom_du_champ']; 
